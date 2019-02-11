@@ -1,14 +1,15 @@
 import * as firebase from 'firebase'
 
 var config = {
-	apiKey: 'AIzaSyAUWJbyXh7L7K6smzo2jWd-nWE1Q7nF0fU',
-	authDomain: 'goalcoach-2ca4e.firebaseapp.com',
-	databaseURL: 'https://goalcoach-2ca4e.firebaseio.com',
-	projectId: 'goalcoach-2ca4e',
-	storageBucket: '',
-	messagingSenderId: '37003153608'
+	apiKey: 'AIzaSyAXvhUvcczLtHpNJ8R2LEgtGIYkVBJfZc4',
+	authDomain: 'goalcoach-a9eb0.firebaseapp.com',
+	databaseURL: 'https://goalcoach-a9eb0.firebaseio.com',
+	projectId: 'goalcoach-a9eb0',
+	storageBucket: 'goalcoach-a9eb0.appspot.com',
+	messagingSenderId: '70153634105'
 }
 
 export const firebaseApp = firebase.initializeApp(config)
 
 export const goalRef = firebase.database().ref('goals')
+console.log('goalRef: ', goalRef)
