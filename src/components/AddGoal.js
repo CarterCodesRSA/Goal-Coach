@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { goalRef } from '../firebase'
 
 class AddGoal extends Component {
@@ -10,9 +11,10 @@ class AddGoal extends Component {
 	}
 
 	addGoal() {
-		console.log('add goal state', this.state)
-
-		goalRef.push({ email: 'test@test.com', title: this.state.title })
+		const { title } = this.state
+		const { email } = this.props.user
+		console.log('add goal state', this)
+		goalRef.push({ email: email, title: title })
 	}
 
 	render() {
@@ -26,7 +28,7 @@ class AddGoal extends Component {
 						style={{ marginRight: '5px' }}
 						onChange={e => this.setState({ title: e.target.value })}
 					/>
-					<button className="btn btn-dark" onClick={() => this.addGoal()}>
+					<button className="btn btn-success" onClick={() => this.addGoal()}>
 						Add Goal
 					</button>
 				</div>
@@ -35,4 +37,14 @@ class AddGoal extends Component {
 	}
 }
 
-export default AddGoal
+function mapStateToProps(state) {
+	const { user } = state
+	return {
+		user
+	}
+}
+
+export default connect(
+	mapStateToProps,
+	null
+)(AddGoal)
