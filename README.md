@@ -8,7 +8,6 @@ A goal tracking application which allows the user to track not only the goals se
 - React Redux
 - Bootstrap
 - React Router
-- Bullet list item 2
 
 ## Installation
 
