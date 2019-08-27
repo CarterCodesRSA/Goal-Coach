@@ -2,7 +2,6 @@
 
 A goal tracking application which allows the user to track not only the goals set by the current logged in user, but also the goal tracked by others
 
-![](images/Goal_Coach.jpg)
 
 ## Frameworks
 
