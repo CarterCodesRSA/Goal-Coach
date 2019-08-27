@@ -27,7 +27,7 @@ class CompleteGoalList extends Component {
 				{this.props.completeGoals.map((completedGoal, index) => {
 					const { title, email } = completedGoal
 					return (
-						<div key={index}>
+						<div key={index} className="mb-2">
 							<strong>{title}</strong> completed by: <em>{email}</em>
 						</div>
 					)

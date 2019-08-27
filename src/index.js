@@ -11,6 +11,7 @@ import { logUser } from './Actions/Actions'
 import App from './components/App'
 import SignUp from './components/SignUp'
 import SignIn from './components/SignIn'
+import NavBar from './components/Navbar'
 
 const store = createStore(Reducer)
 
@@ -26,6 +27,7 @@ firebaseApp.auth().onAuthStateChanged(user => {
 
 ReactDOM.render(
 	<Provider store={store}>
+		<NavBar />
 		<Router path="/" history={browserHistory}>
 			<Route path="/app" component={App} />
 			<Route path="/signin" component={SignIn} />

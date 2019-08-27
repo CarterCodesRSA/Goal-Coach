@@ -12,8 +12,7 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="container">
-				<h3>Goals Coach</h3>
+			<div className="container" align="center">
 				<AddGoal />
 				<hr />
 				<h4>Goals</h4>
